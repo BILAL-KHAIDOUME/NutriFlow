@@ -1,0 +1,28 @@
+{
+  "name": "nutriflow-recipes",
+  "version": "1.0.0",
+  "description": "NutriFlow – recipes dashboard with calories, favorites, and daily total.",
+  "private": true,
+  "scripts": {
+    "build:css": "sass styles/main.scss styles/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}
+
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
+}

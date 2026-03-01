@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NutriFlow - Recipes Dashboard</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <header class="nf-header">
+      <div class="nf-header__brand">
+        <h1>NutriFlow</h1>
+        <p class="nf-header__subtitle">Mindful recipes & calorie insights</p>
+      </div>
+      <div class="nf-header__search">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Search a recipe (e.g. pasta, salad...)"
+          autocomplete="off"
+        />
+      </div>
+    </header>
+
+    <main class="nf-main">
+      <section class="nf-main__left">
+        <div id="loader" class="nf-loader nf-loader--hidden">
+          <div class="nf-loader__spinner"></div>
+          <p>Loading tasty recipes...</p>
+        </div>
+
+        <div id="error-banner" class="nf-error nf-error--hidden"></div>
+
+        <div id="recipes-grid" class="nf-recipes-grid"></div>
+      </section>
+
+      <aside class="nf-main__right">
+        <section class="nf-day">
+          <h2>My Day</h2>
+          <p class="nf-day__subtitle">
+            Track the total calories of your favorite recipes.
+          </p>
+          <div class="nf-day__stats">
+            <span class="nf-day__label">Total calories</span>
+            <span id="day-total-calories" class="nf-day__value">0 kcal</span>
+          </div>
+        </section>
+
+        <section class="nf-favorites">
+          <h2>Favorites</h2>
+          <ul id="favorites-list" class="nf-favorites__list"></ul>
+          <p id="favorites-empty" class="nf-favorites__empty">
+            You have no favorite recipes yet. Click the heart on a recipe to add
+            it here.
+          </p>
+        </section>
+      </aside>
+    </main>
+
+    <div id="recipe-modal" class="nf-modal nf-modal--hidden" aria-hidden="true">
+      <div class="nf-modal__backdrop" data-modal-close></div>
+      <div class="nf-modal__dialog" role="dialog" aria-modal="true">
+        <button
+          type="button"
+          class="nf-modal__close"
+          aria-label="Close recipe details"
+          data-modal-close
+        >
+          ×
+        </button>
+        <div id="modal-content" class="nf-modal__content"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+  </html>
+

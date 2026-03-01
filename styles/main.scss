@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'cards';
+@import 'modal';
+@import 'responsive';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $nf-font-family-base;
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.85), #020617 60%),
+    #020617;
+  color: $nf-color-text-main;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+input,
+button {
+  border-radius: 0;
+}
+
+::selection {
+  background: rgba(74, 222, 128, 0.3);
+  color: #e5e7eb;
+}
+
